@@ -12,6 +12,8 @@
 */
 
 Route::get('/hello/', 'HelloController@index');
+Route::get('/article/', 'ArticleController@index');
+Route::get('/article/show/{id}', 'ArticleController@show');
 
 Route::get('/', function () {
     return view('welcome');
