@@ -13,7 +13,25 @@
 
 Route::get('/hello/', 'HelloController@index');
 Route::get('/article/', 'ArticleController@index');
-Route::get('/article/show/{id}', 'ArticleController@show');
+
+Route::get('/article/show/{article}', function(App\Article $article){
+    return view('article.show', ['article' => $article]);
+});
+Route::get('/article/edit/{article}', function(App\Article $article){
+    return view('article.edit', ['article' => $article]);
+});
+Route::get('/article/delete/{article}', function(App\Article $article){
+    return view('article.delete', ['article' => $article]);
+});
+Route::get('/article/complete', function(){
+    return view('article.complete');
+});
+Route::get('/article/create', function(){
+    return view('article.create');
+});
+
+Route::post('/article/store', 'ArticleController@store');
+Route::post('/article/destroy', 'ArticleController@destroy');
 
 Route::get('/', function () {
     return view('welcome');

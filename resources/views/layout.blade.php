@@ -46,7 +46,7 @@
             }
 
             .title {
-                font-size: 84px;
+                font-size: 60px;
             }
 
             .links > a {
@@ -62,6 +62,22 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .article-form {
+                width: 800px;
+                text-align: left;
+                margin: 0 auto;
+            }
+
+            .article-form-column {
+                display: flex;
+                margin: 5px 0;
+            }
+
+            .article-form-label {
+                width: 5em;
+            }
+
         </style>
     </head>
     <body>
