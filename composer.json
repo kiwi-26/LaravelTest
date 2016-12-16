@@ -14,7 +14,9 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.0",
-        "symfony/css-selector": "3.1.*"
+        "symfony/css-selector": "3.1.*",
+	"symfony/finder": "3.1.*",
+	"symfony/dom-crawler": "2.8.*"
     },
     "autoload": {
         "classmap": [

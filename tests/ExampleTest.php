@@ -16,4 +16,15 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Laravel');
     }
+
+    public function testArticleLink()
+    {
+        $this
+            ->visit('/')
+            ->click('Articles')
+            ->see('Article')
+            ->dontsee('Error')
+            ->dontsee('Fatal')
+            ->dontsee('Warning');
+    }
 }

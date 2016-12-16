@@ -48,5 +48,34 @@ class ArticleController extends Controller
         }
     }
 
+    public function calcAdd($n1, $n2) {
+        $N_MAX = 999;
+        $N_MIN = -999;
+
+        // 数字であること、小数はなし
+        if (!is_int($n1) || !is_int($n2)) {
+            return false;
+        }
+
+        // 引数の上限、下限
+        if ($n1 < $N_MIN || $n1 > $N_MAX || $n2 < $N_MIN || $n2 > $N_MAX) {
+            return false;
+        }
+
+        $result = $n1 + $n2;
+        
+        // 返り値の上限、下限
+        if ($result > 2 * $N_MAX || $result < 2 * $N_MIN) {
+            return false;
+        }
+
+        // 結果が777の場合
+        if ($result == 777) {
+            return 'Happy';
+        }
+
+        // 引数を足した値を返す
+        return $result;
+    }
 
 }

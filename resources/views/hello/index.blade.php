@@ -4,7 +4,12 @@
 
 @section('content')
 <div class="content">
-<h1 class="title">Hello Laravel World!</h1>
+<h1 class="title">Attack Logs</h1>
+<p>
+@foreach($logs as $log)
+    {{ $log }}<br />
+@endforeach
+</p>
 </div>
 @stop
 

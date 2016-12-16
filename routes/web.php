@@ -14,6 +14,8 @@
 Route::get('/hello/', 'HelloController@index');
 Route::get('/article/', 'ArticleController@index');
 
+Route::get('/article/add/{n1}/{n2}', 'ArticleController@calcAdd');
+
 Route::get('/article/show/{article}', function(App\Article $article){
     return view('article.show', ['article' => $article]);
 });
