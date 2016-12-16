@@ -16,7 +16,7 @@ class ExampleTest extends TestCase
         $this->visit('/')
              ->see('Laravel');
     }
-
+/*
     public function testArticleLink()
     {
         $this
@@ -27,4 +27,5 @@ class ExampleTest extends TestCase
             ->dontsee('Fatal')
             ->dontsee('Warning');
     }
+*/
 }
