@@ -6,6 +6,7 @@ php:
 before_script:
  - curl -s http://getcomposer.org/installer | php
  - php composer.phar install
+ - php artisan serve
 
 script:
  - vendor/bin/phpunit tests/CalcAddTest.php
